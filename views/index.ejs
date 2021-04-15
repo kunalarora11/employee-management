@@ -1,6 +1,6 @@
 
 <!-- include header -->
-    <%- include('include/_header') %>
+<%- include('include/_header') %>
 <!-- /include header -->
 
 
@@ -8,6 +8,12 @@
     <main id="site-main">
         <div class="container">
             <div class="box-nav d-flex justify-between">
+                <div class="wrap">
+                    
+                    <div class="search">
+                       <input type="text" id="myInput" class="searchTerm" name="search" placeholder="Search">
+                    </div>
+                </div>
                 <a href="/add-user" class="border-shadow">
                     <span class="text-gradient">New Employee <i class="fas fa-user"></i></span>
                 </a>
@@ -15,7 +21,7 @@
 
             <!-- form handling -->
             <form action="/" method="POST">
-                <table class="table">
+                <table id="table" class="table">
                     <thead class="thead-dark">
                         <tr>
                             <th>ID</th>
@@ -26,7 +32,7 @@
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="myTable">
                         <%- include('include/_show') %>
                     </tbody>
                 </table>
